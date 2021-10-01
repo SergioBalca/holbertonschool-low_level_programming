@@ -19,19 +19,19 @@ if (ld > 5)
 {
 char str5[50] = "and is greater than 5";
 
-printf("Last digit of %d is %d %s", n, ld, str5);
+printf("Last digit of %d is %d %s\n", n, ld, str5);
 }
 else if (0 < ld && 6 > ld)
 {
 char str6[50] = "and is less than 6 and not 0";
 
-printf("Last digit of %d is %d %s ", n, ld, str6);
+printf("Last digit of %d is %d %s\n", n, ld, str6);
 }
 else
 {
 char str0[50] = "and is 0";
 
-printf("Last digit of %d is %d %s", n, ld, str0);
+printf("Last digit of %d is %d %s\n", n, ld, str0);
 }
 return (0);
 }
