@@ -14,6 +14,7 @@ int h;
 for (ch = '0'; ch <= '9'; ch++)
 putchar(ch);
 for (h = 'a'; h <= 'f'; h++)
+putchar(h);
 putchar('\n');
 return (0);
 }
