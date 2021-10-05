@@ -1,3 +1,3 @@
-#include <unistd.h>
-#include "main.c"
+#include "_putchar.c"
 int _putchar(char);
+
