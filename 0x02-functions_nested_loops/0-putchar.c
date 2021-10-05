@@ -4,7 +4,6 @@
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 char input[11] = "_putchar\n";
