@@ -11,8 +11,10 @@ if (n < 98)
 {
 int i;
 
-for (i = n; i <= 98; i++)
+for (i = n; i <= 97; i++)
 printf("%d, ", i);
+putchar('9');
+putchar('8');
 }
 else if (n == 98)
 {
@@ -22,8 +24,10 @@ else
 {
 int v;
 
-for (v = n; v >= 98; v--)
+for (v = n; v >= 97; v--)
 printf("%d, ", v);
+putchar('9');
+putchar('8');
 }
 putchar('\n');
 }
