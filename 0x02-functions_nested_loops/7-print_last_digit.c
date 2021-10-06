@@ -7,14 +7,12 @@
  */
 int print_last_digit(int n)
 {
-int result;
+int ld = n % 10;
 
-if (n < 0)
+if (ld < 0)
 {
-int p = n * -1;
-result = p % 10;
+ld = ld * -1;
 }
-else
-result = n % 10;
-return (result);
+_putchar(ld + 48);
+return (ld);
 }
