@@ -24,7 +24,7 @@ else
 {
 int v;
 
-for (v = n; v >= 97; v--)
+for (v = n; v >= 99; v--)
 printf("%d, ", v);
 putchar('9');
 putchar('8');
