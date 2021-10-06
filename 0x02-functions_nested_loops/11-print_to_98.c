@@ -16,7 +16,7 @@ printf("%d, ", i);
 }
 else if (n == 98)
 {
-printf("%d, ", n);
+printf("%d", n);
 }
 else
 {
