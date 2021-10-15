@@ -19,7 +19,7 @@ if (s1[i] - s2[i] == 0)
 {
 i++;
 }
-else 
+else
 break;
 }
 
