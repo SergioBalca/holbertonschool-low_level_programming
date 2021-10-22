@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 int i;
 int mult = 1;
 
-if (argc > 1)  /*if there is not arguments passed to the program, argc = 1*/
+if (argc > 2)  /*there has to be two arguments passed to the progrma*/
 {
 for (i = 1; i < argc; i++)
 {
