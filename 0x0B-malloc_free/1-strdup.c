@@ -19,7 +19,7 @@ while (str[i] != '\0')
 {
 i++;
 }
-size = i + 1;
+size = i;
 ptr = malloc(size * (sizeof(char)));
 
 if (str == NULL)
