@@ -26,10 +26,11 @@ if (str == NULL)
 {
 return ('\0');
 }
-else 
+else
 {
 ptr = str;
 return (ptr);
+free(ptr);
 }
 return (0);
 }
