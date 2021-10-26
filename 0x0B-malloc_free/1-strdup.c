@@ -11,6 +11,7 @@
 
 char *_strdup(char *str)
 {
+char *sc = str;
 int size;
 char *ptr;
 int i = 0;
@@ -28,8 +29,9 @@ return ('\0');
 }
 else
 {
-ptr = str;
+ptr = sc;
 return (ptr);
+free(ptr);
 }
 return (0);
 }
