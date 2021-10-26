@@ -30,7 +30,6 @@ else
 {
 ptr = str;
 return (ptr);
-free(ptr);
 }
 return (0);
 }
