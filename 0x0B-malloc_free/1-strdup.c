@@ -25,6 +25,7 @@ ptr = malloc(size * (sizeof(char)));
 if (str == NULL)
 {
 return ('\0');
+free(str);
 }
 else 
 {
