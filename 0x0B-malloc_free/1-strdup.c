@@ -25,13 +25,15 @@ ptr = malloc(size * (sizeof(char)));
 
 if (str == NULL)
 {
-return ('\0');
+return (NULL);
 }
 else
 {
-ptr = sc;
+while (str[i] != '\0')
+{
+ptr[i] = str[i];	
 return (ptr);
-free(ptr);
+}
 }
 return (0);
 }
