@@ -18,26 +18,26 @@ int size;
 
 if (str == NULL)
 {
- return (NULL);
+return ('\0');
 }
 
 while (str[i] != '\0')
 {
- i++;
+i++;
 }
 size = i + 1;
-ptr =(char *)malloc(sizeof(char) * size);
+ptr = (char *)malloc(sizeof(char) * size);
+
 if (ptr == NULL)
 {
- return (NULL);
+return ('\0');
 }
-
 sc = ptr;
 while (*str)
 {
- *sc = *str;
- sc++;
- str++;
+*sc = *str;
+sc++;
+str++;
 }
 
 *sc = '\0';
