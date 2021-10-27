@@ -11,26 +11,36 @@
 
 char *_strdup(char *str)
 {
-int size;
 char *ptr;
+char *sc;
 int i = 0;
-
-while (str[i] != '\0')
-{
-i++;
-}
-size = i + 1;
-ptr = malloc(size * (sizeof(char)));
+int size;
 
 if (str == NULL)
 {
-return ('\0');
-free(str);
+ return (NULL);
 }
-else 
+
+while (str[i] != '\0')
 {
-ptr = str;
+ i++;
+}
+size = i + 1;
+ptr =(char *)malloc(sizeof(char) * size);
+if (ptr == NULL)
+{
+ return (NULL);
+}
+
+sc = ptr;
+while (*str)
+{
+ *sc = *str;
+ sc++;
+ str++;
+}
+
+*sc = '\0';
 return (ptr);
 }
-return (0);
-}
+
