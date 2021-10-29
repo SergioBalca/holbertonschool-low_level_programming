@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 
+
 /**
  * malloc_checked- allocates mamory using malloc
  * @b: is the size of memory to be allocated
@@ -11,11 +12,10 @@
 void *malloc_checked(unsigned int b)
 {
 void *ptr;
-
 ptr = malloc(b);
 if (ptr == NULL)
 {
-return ((void *)98);
+exit (98);
 }
 return (ptr);
 }
