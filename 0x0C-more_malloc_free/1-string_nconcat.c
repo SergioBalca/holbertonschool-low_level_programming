@@ -49,6 +49,7 @@ ptr[i] = s2[j];
 }
 }
 }
+ptr[i] = '\0';
 return (ptr);
 }
 /**
