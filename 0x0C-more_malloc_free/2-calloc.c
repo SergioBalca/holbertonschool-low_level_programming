@@ -11,18 +11,21 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-char *ptr;
-unsigned int mul = nmemb * size;
+char *ptr = NULL;
+unsigned int i = 0;
 
-ptr = malloc(mul);
-memset(ptr, 0, mul);
-if (ptr == NULL)
-{
-return ('\0');
-}
 if (nmemb == 0 || size == 0)
 {
-return ('\0');
+return (NULL);
+}
+ptr = (void *)malloc(nmemb * size);
+if (ptr == NULL)
+{
+return (NULL);
+}
+for (; i < nmemb * size; i++)
+{
+ptr[i] = 0;
 }
 return (ptr);
 }
