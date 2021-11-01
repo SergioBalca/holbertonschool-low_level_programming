@@ -14,15 +14,15 @@ if (d)
 {
 if (!d->name)
 {
-printf("Name: %s\n", (nil));
+printf("Name: (nil)\n");
 }
 if (!d->age)
 {
-printf("Age: %s\n", (nil));
+printf("Age: (nil)\n");
 }
 if (!d->owner)
 {
-printf("Owner: %s\n", (nil));
+printf("Owner: (nil)\n");
 }
 printf("Name: %s\n", d->name);
 printf("Age: %f\n", d->age);
