@@ -18,11 +18,11 @@ printf("Name: %s\n", (nil));
 }
 if (!d->age)
 {
-printf("Age: \n", (nil));
+printf("Age: %s\n", (nil));
 }
 if (!d->owner)
 {
-printf("Owner: \n", (nil));
+printf("Owner: %s\n", (nil));
 }
 printf("Name: %s\n", d->name);
 printf("Age: %f\n", d->age);
