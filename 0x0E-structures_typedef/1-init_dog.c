@@ -20,17 +20,20 @@ d->owner = owner;
 }
 else if (!name)
 {
+d->name = NULL;
 d->age = age;
 d->owner = owner;
 }
 else if (!age)
 {
 d->name = name;
+d->age = 0;
 d->owner = owner;
 }
 else if (!owner)
 {
 d->name = name;
 d->age = age;
+d->owner = NULL;
 }
 }
