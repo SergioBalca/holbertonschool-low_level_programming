@@ -1,6 +1,7 @@
 #include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * new_dog- creates a new dog, meaning that store is name
@@ -22,6 +23,8 @@ if (d)
 d->name = name;
 d->age = age;
 d->owner = owner;
+memcpy(d->name, d, sizeof(dog_t));
+memcpy(d->owner, d, sizeof(dog_t));
 }
 else
 {
