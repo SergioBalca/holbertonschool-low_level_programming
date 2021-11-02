@@ -26,6 +26,7 @@ d->owner = owner;
 else
 {
 return (NULL);
+free(d);
 }
 return (d);
 }
