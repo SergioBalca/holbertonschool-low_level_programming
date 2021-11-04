@@ -31,7 +31,7 @@ while (!cmp(array[i]))
 i++;
 }
 }
-if (i == j)
+if (i == j && j != 0)
 return (-1);
 else
 return (i);
