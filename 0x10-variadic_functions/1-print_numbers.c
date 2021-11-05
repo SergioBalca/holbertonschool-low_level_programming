@@ -21,7 +21,7 @@ for (; i < n; i++)
 {
 if (!i)
 {
-printf("%d ", va_arg(intptr, int));
+printf("%d", va_arg(intptr, int));
 }
 else
 {
