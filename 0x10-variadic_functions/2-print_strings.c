@@ -14,24 +14,33 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 unsigned int i = 0;
+char *p;
 
 va_list ptr;
 va_start(ptr, n);
 for (; i < n; i++)
 {
+p = va_arg(ptr, char *);
+if (!p)
+{
+printf("(nil)");
+}
+else
+{
 if (!i)
 {
-printf("%s", va_arg(ptr, char *));
+printf("%s", p);
 }
 else
 {
 if (separator)
 {
-printf("%s%s", separator, va_arg(ptr, char *));
+printf("%s%s", separator, p);
 }
 else
 {
-printf("%s", va_arg(ptr, char *));
+printf("%s", p);
+}
 }
 }
 }
