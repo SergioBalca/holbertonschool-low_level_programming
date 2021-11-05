@@ -23,10 +23,8 @@ for (; i < n; i++)
 p = va_arg(ptr, char *);
 if (!p)
 {
-printf("(nil)");
+p = "(nil)";
 }
-else
-{
 if (!i)
 {
 printf("%s", p);
@@ -40,7 +38,6 @@ printf("%s%s", separator, p);
 else
 {
 printf("%s", p);
-}
 }
 }
 }
