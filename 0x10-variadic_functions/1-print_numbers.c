@@ -21,7 +21,7 @@ for (; i < n; i++)
 {
 if (!i)
 {
-printf("%d", va_arg(intptr, int));
+printf("%d ", va_arg(intptr, int));
 }
 else
 {
@@ -31,7 +31,7 @@ printf("%s %d", separator, va_arg(intptr, int));
 }
 else
 {
-printf("%d ", va_arg(intptr, int));
+printf(" %d", va_arg(intptr, int));
 }
 }
 }
