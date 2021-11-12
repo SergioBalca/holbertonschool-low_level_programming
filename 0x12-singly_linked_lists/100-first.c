@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * main - check the code
- *
+ * before- function that prints a string
+ * before the main function is executed
  * Return: Always 0.
  */
 
