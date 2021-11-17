@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * free_listint2- frees a listint_t list
+ * @head: a pointer to the address of the new element
+ * Return: Nothing
  */
 
 void free_listint2(listint_t **head)
@@ -15,15 +15,15 @@ void free_listint2(listint_t **head)
 	{
 		return;
 	}
-	
+
 	current_node = *head;
-	
+
 	while (current_node)
 	{
 		next_node = current_node;
 		current_node = current_node->next;
 		free(next_node);
 	}
-	
+
 	*head = NULL;
 }
