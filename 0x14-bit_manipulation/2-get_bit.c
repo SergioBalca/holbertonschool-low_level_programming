@@ -17,11 +17,14 @@ int get_bit(unsigned long int n, unsigned int index)
 		return (-1);
 	}
 
-	if (index == UINT_MAX)
+	else if (index == UINT_MAX)
 	{
 		return (-1);
 	}
 
-	bit = (n >> index) & 1;
-	return (bit);
+	else
+	{
+		bit = (n >> index) & 1;
+		return (bit);
+	}
 }
