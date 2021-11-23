@@ -27,8 +27,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	read_letters = read(fd, buf, letters);
 	write_letters = write_stdout(read_letters, buf, letters);
-
-	buf[letters] = '\0';
 	free(buf);
 	return (write_letters);
 }
@@ -54,7 +52,7 @@ ssize_t write_stdout(ssize_t read_letters, char *buf, size_t letters)
 			free(buf);
 			return (0);
 		}
-
+		buf[read_letters] = '\0';
 	}
 
 	else
@@ -74,7 +72,11 @@ ssize_t write_stdout(ssize_t read_letters, char *buf, size_t letters)
 				return (0);
 			}
 		}
+
+		buf[letters] = '\0';
 	}
+
+
 
 	return (write_letters);
 }
