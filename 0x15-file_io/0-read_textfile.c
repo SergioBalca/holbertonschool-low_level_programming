@@ -52,7 +52,7 @@ ssize_t write_stdout(ssize_t read_letters, char *buf, size_t letters)
 			free(buf);
 			return (0);
 		}
-		buf[read_letters] = '\0';
+		buf[read_letters + 1] = '\0';
 	}
 
 	else
@@ -73,7 +73,7 @@ ssize_t write_stdout(ssize_t read_letters, char *buf, size_t letters)
 			}
 		}
 
-		buf[letters] = '\0';
+		buf[letters + 1] = '\0';
 	}
 
 
