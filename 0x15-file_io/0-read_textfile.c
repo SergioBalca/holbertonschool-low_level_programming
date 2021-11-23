@@ -49,7 +49,6 @@ ssize_t write_stdout(ssize_t read_letters, char *buf, size_t letters)
 		write_letters = write(STDOUT_FILENO, buf, read_letters);
 		if (write_letters == -1)
 		{
-			free(buf);
 			return (0);
 		}
 	}
@@ -75,6 +74,6 @@ ssize_t write_stdout(ssize_t read_letters, char *buf, size_t letters)
 	}
 
 
-
+	free(buf);
 	return (write_letters);
 }
