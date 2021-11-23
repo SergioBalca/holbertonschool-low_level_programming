@@ -47,7 +47,7 @@ ssize_t write_stdout(ssize_t read_letters, char *buf, size_t letters)
 	if (read_letters > 0)
 	{
 		write_letters = write(STDOUT_FILENO, buf, read_letters);
-		if (write_letters == -1)
+		if (write_letters == -1 || write_letters != read_letters)
 		{
 			free(buf);
 			return (0);
@@ -65,7 +65,7 @@ ssize_t write_stdout(ssize_t read_letters, char *buf, size_t letters)
 		else
 		{
 			write_letters = write(STDOUT_FILENO, buf, letters);
-			if (write_letters == -1)
+			if (write_letters == -1 || write_letters != (ssize_t)letters)
 			{
 				free(buf);
 				return (0);
