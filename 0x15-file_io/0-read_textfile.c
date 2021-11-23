@@ -22,12 +22,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buf = malloc(sizeof(char) * letters);
 	if (!buf)
 	{
+		free(buf);
 		return (0);
 	}
 
 	read_letters = read(fd, buf, letters);
 	write_letters = write_stdout(read_letters, buf, letters);
-	free(buf);
 	return (write_letters);
 }
 
