@@ -41,7 +41,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
  * Return: the actual number of read and printed letters
  */
 
-ssize_t write_stdout(int fd, ssize_t read_letters, char *buf, size_t letters)
+ssize_t write_stdout(ssize_t read_letters, char *buf, size_t letters)
 {
 	ssize_t write_letters;
 
