@@ -14,7 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buf;
 	ssize_t read_letters, write_letters;
 
-	fd = open("Requiescat", O_RDONLY);
+	fd = open(filename, O_RDONLY);
 	if (fd == -1 || filename == NULL)
 	{
 		return (0);
@@ -28,6 +28,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	read_letters = read(fd, buf, letters);
 	write_letters = write_stdout(read_letters, buf, letters);
 	free(buf);
+	close(fd);
 	return (write_letters);
 }
 
@@ -40,7 +41,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
  * Return: the actual number of read and printed letters
  */
 
-ssize_t write_stdout(ssize_t read_letters, char *buf, size_t letters)
+ssize_t write_stdout(int fd, ssize_t read_letters, char *buf, size_t letters)
 {
 	ssize_t write_letters;
 
