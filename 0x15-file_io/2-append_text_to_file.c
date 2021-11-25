@@ -24,7 +24,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	
+
 	count = length(text_content);
 	buf = malloc(sizeof(char) * count + 1);
 	if (!buf)
@@ -59,6 +59,6 @@ int length(char *str)
 	{
 		i++;
 	}
-	
+
 	return (i);
 }
