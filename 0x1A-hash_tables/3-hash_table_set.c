@@ -16,35 +16,25 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *last = NULL;
 
 	index = key_index((unsigned char *)key, ht->size);
-
 	next = ht->array[index];
-
 	while (!next && !next->key && strcmp(key, next->key) > 0)
 	{
 		last = next;
 		next = next->next;
 	}
-
-	/* There's already a pair. Update that node */
-	
 	if (!next && !next->key && strcmp(key, next->key) == 0)
 	{
-		free(next->value);
+		free(next->value);	/* There's already a pair. Update that node */
 		next->value = strdup(value);
 	}
-	
-	/* Couldn't find it. Create a new pair*/
-
-	else
+	else	/* Couldn't find it. Create a new pair*/
 	{
 		newpair = ht_newpair(key, value);
-
 		if (next == ht->array[index])
 		{
 			newpair->next = next;
 			ht->array[index] = newpair;
 		}
-
 		else if (next == NULL)
 		{
 			last->next = newpair;
@@ -55,11 +45,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			last->next = newpair;
 		}
 	}
-
 	return (1);
 }
-
-
 
 /**
  * ht_newpair- defines a new pair of key/vale
@@ -71,12 +58,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 hash_node_t *ht_newpair(const char *key, const char *value)
 {
 	hash_node_t *newpair = NULL;
-	
+
 	if (strlen(key) == 0)
 	{
 		return (0);
 	}
-	
+
 	newpair = malloc(sizeof(hash_node_t));
 	if (!newpair)
 	{
