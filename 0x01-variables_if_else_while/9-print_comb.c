@@ -8,16 +8,19 @@
  */
 int main(void)
 {
-int ch;
+	int ch;
 
-ch = 0;
-while (ch <= 9)
-{
-putchar(ch);
-putchar(',');
-putchar(' ');
-ch++;
-}
-putchar('\n');
-return (0);
+	ch = 0;
+	while (ch <= 9)
+	{
+		putchar(ch + '0');
+		if (ch != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		ch++;
+	}
+	putchar('\n');
+	return (0);
 }
