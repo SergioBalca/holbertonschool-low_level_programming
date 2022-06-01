@@ -10,18 +10,18 @@ int main(void)
 	int i;
 	int n = 50;
 	/*initialize first and second numbers*/
-	long int n1 = 0;
-	long int n2 = 1;
+	long int n1 = 1;
+	long int n2 = 2;
 
 	/*initialize next number*/
 	long int n3 = n1 + n2;
 
 	/*prints the first two numbers*/
-	printf("%ld, ", n2);
+	printf("%ld, %ld, ", n1, n2);
 	/*prints third to nth numbers*/
-	for (i = 3; i <= n + 1; i++)
+	for (i = 3; i <= n ; i++)
 	{
-		if (i == n + 1)
+		if (i == n)
 			printf("%ld\n", n3);
 		else
 		{
