@@ -36,22 +36,10 @@ int number_size(int n)
 {
 	int count = 0;
 
-	if (n > 0)
+	while (n != 0)
 	{
-		while (n != 0)
-		{
-			n = n / 10;
-			count++;
-		}
-	}
-	else
-	{
-		n *= -1;
-		while (n != 0)
-		{
-			n = n / 10;
-			count++;
-		}
+		n = n / 10;
+		count++;
 	}
 	return (count);
 }
@@ -111,23 +99,19 @@ void print_negative(int n, int div)
 	int count = 0;
 
 	count = number_size(n);
-	if (n == INT_MIN)
-		n = INT_MAX;
-	else
-		n *= -1;
 	while (j < count)
 	{
 		if (j == 0)
 		{
 			_putchar('-');
-			_putchar((n / div) + '0');
+			_putchar(((n / div) * -1) + '0');
 		}
 		else
 		{
 			if (div == 0)
-				_putchar((n % 10) + '0');
+				_putchar(((n % 10) * -1) + '0');
 			else
-				_putchar(((n / div) % 10) + '0');
+				_putchar((((n / div) % 10) * -1) + '0');
 		}
 		div /= 10;
 		j++;
