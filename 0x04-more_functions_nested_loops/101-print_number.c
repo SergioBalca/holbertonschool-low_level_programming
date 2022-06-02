@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <limits.h>
 /**
  * print_number- prints a number passed as argument
  * @n: number to print
@@ -110,7 +111,10 @@ void print_negative(int n, int div)
 	int count = 0;
 
 	count = number_size(n);
-	n *= -1;
+	if (n == INT_MIN)
+		n = INT_MAX;
+	else
+		n *= -1;
 	while (j < count)
 	{
 		if (j == 0)
