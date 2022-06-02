@@ -16,6 +16,7 @@ void print_number(int n)
 	/*single digit negative number*/
 	else if (n < 0 && n > -10)
 	{
+		n *= -1;
 		_putchar('-');
 		_putchar(n + '0');
 	}
